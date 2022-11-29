@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
+.month {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
