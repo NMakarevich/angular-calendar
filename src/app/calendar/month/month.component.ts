@@ -8,11 +8,8 @@ import { Component, Input } from '@angular/core';
 export class MonthComponent {
   @Input() date!: Date;
 
-  stringDate() {
-    return this.date.toLocaleDateString('en-US', {
-      month: 'long',
-      year: 'numeric',
-    });
+  get weekDays() {
+    return ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   }
 
   generateDaysArray = () => {
