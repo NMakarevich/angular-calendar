@@ -1,4 +1,3 @@
-<h2 class="title">{{stringDate()}}</h2>
 <div class="month">
     <div class="day-title" *ngFor="let day of weekDays">{{day}}</div>
     <app-day *ngFor="let date of generateDaysArray()" [date]="date"></app-day>
