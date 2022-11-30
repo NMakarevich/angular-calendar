@@ -1,4 +1,16 @@
 <div class="calendar">
+  <div class="title">
+    <app-select
+      [label]="'Select month'"
+      [selectItems]="monthList"
+      [selectedValue]="stringMonth || ''"
+      (setItemValue)="setMonth($event)"></app-select>
+    <app-select
+      [label]="'Select year'"
+      [selectItems]="years"
+      [selectedValue]="stringYear || ''"
+      (setItemValue)="setYear($event)"></app-select>
+  </div>
   <app-slider>
     <app-month [date]="prevMonthS"></app-month>
     <app-month [date]="currentMonth"></app-month>
