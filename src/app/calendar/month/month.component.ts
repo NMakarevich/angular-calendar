@@ -8,6 +8,10 @@ import { Component, Input } from '@angular/core';
 export class MonthComponent {
   @Input() date!: Date;
 
+  get month() {
+    return this.date.getMonth();
+  }
+
   get weekDays() {
     return ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   }

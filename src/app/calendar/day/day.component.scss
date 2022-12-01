@@ -6,6 +6,10 @@
   border: 1px solid black;
   border-radius: 5px;
 
+  &.today {
+    border-color: #69f0ae;
+  }
+
   &.outdated {
     border-color: rgba(0, 0, 0, 0.12);
   }

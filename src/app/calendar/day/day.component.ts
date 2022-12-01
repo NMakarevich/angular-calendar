@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { DateService } from '../date.service';
 
 @Component({
   selector: 'app-day',
@@ -7,22 +6,24 @@ import { DateService } from '../date.service';
   styleUrls: ['./day.component.scss'],
 })
 export class DayComponent {
-  constructor(private readonly dateService: DateService) {}
-
   @Input()
   date!: Date;
+
+  @Input()
+  month!: number;
 
   getDate = () => {
     return this.date.getDate();
   };
 
   setClass = () => {
-    let className = '';
+    const className = '';
     const day = this.date.getDay();
     const dateMonth = this.date.getMonth();
-    const calendarMonth = this.dateService.date.getMonth();
-    if (day === 0 || day === 6) className = 'weekend';
-    if (dateMonth !== calendarMonth) className = 'outdated';
+    if (this.date.toLocaleDateString() === new Date().toLocaleDateString())
+      return 'today';
+    if (dateMonth !== this.month) return 'outdated';
+    if (day === 0 || day === 6) return 'weekend';
     return className;
   };
 }
