@@ -1,0 +1,20 @@
+.day {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &.today {
+    border-color: #69f0ae;
+  }
+
+  &.outdated {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  &.weekend {
+    border-color: #f44336;
+  }
+}

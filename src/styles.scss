@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1000px;
+}
+
+.button {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+}

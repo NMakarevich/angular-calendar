@@ -1,0 +1,14 @@
+<div class="slider">
+  <button class="button slider-button" (click)="prevMonth()">prev</button>
+  <div class="slider-wrapper">
+    <div class="slider-inner"
+         [@moveForward]="moveForward ? 'forward' : 'start'"
+         [@moveBack]="moveBack ? 'back' : 'start'"
+         (@moveForward.done)="endAnimation()"
+         (@moveBack.done)="endAnimation()"
+    >
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <button class="button slider-button" (click)="nextMonth()">next</button>
+</div>

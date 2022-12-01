@@ -1,0 +1,48 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  width: 120px;
+  cursor: pointer;
+
+  &-label {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    font-size: 12px;
+  }
+
+  &-value {
+    display: flex;
+    padding: 10px;
+  }
+
+  &-list {
+    width: 100%;
+    position: absolute;
+    top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    list-style: none;
+    max-height: 200px;
+    overflow: scroll;
+    z-index: 100;
+    background-color: lightgray;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
